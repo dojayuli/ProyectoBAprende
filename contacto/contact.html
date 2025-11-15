@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contacto - SubliArt</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img src="../assets/subliarthorizontal.png" alt="Logo SubliArt" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#nosotros">Nosotros</a></li>
+        <li><a href="../index.html#servicios">Servicios</a></li>
+        <li><a href="./contact.html">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <div class="page-header">
+      <h1>¡Hablemos de tu proyecto!</h1>
+      <p class="subtitle">
+        Cotiza tu idea personalizada y recibe asesoramiento sin compromiso
+      </p>
+    </div>
+
+    <main>
+      <form
+        action="https://formspree.io/f/mnnbkjrz"
+        class="fs-form"
+        method="POST"
+      >
+        <div class="fs-field">
+          <label class="fs-label" for="name">Nombre completo *</label>
+          <input
+            class="fs-input"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Ej: María González"
+            required
+            autocomplete="name"
+          />
+        </div>
+
+        <div class="fs-field">
+          <label class="fs-label" for="email">Correo electrónico *</label>
+          <input
+            class="fs-input"
+            type="email"
+            id="email"
+            name="email"
+            placeholder="tu@email.com"
+            required
+            autocomplete="email"
+          />
+        </div>
+
+        <div class="fs-field">
+          <label class="fs-label" for="phone">Teléfono / WhatsApp</label>
+          <input
+            class="fs-input"
+            type="tel"
+            id="phone"
+            name="phone"
+            placeholder="Ej: +54 9 351 1234567"
+            autocomplete="tel"
+          />
+        </div>
+
+        <div class="fs-field">
+          <label class="fs-label" for="subject"
+            >¿Qué producto te interesa?</label
+          >
+          <select class="fs-input" id="subject" name="subject">
+            <option value="">Selecciona una opción</option>
+            <option value="tazas">Tazas personalizadas</option>
+            <option value="remeras">Remeras y textiles</option>
+            <option value="llaveros">Llaveros y accesorios</option>
+            <option value="corporativo">Productos corporativos</option>
+            <option value="eventos">Eventos especiales</option>
+            <option value="otro">Otro producto</option>
+          </select>
+        </div>
+
+        <div class="fs-field">
+          <label class="fs-label" for="message"
+            >Cuéntanos sobre tu proyecto *</label
+          >
+          <textarea
+            class="fs-textarea"
+            id="message"
+            name="message"
+            placeholder="Describe tu idea, cantidad aproximada, fecha necesaria, etc."
+            required
+            rows="6"
+          ></textarea>
+        </div>
+
+        <div class="fs-button-group">
+          <button class="fs-button" type="submit">Enviar consulta</button>
+        </div>
+
+        <p class="form-note">* Campos obligatorios</p>
+      </form>
+    </main>
+    <footer>
+      <div class="footer-container">
+        <!-- Columna 1: Logo y nombre -->
+        <div class="footer-column footer-logo">
+          <img src="../assets/sublimascota.png" alt="Mascota SubliArt" />
+          <h3>SubliArt</h3>
+        </div>
+
+        <!-- Columna 2: Enlaces principales -->
+        <div class="footer-column footer-links">
+          <h4>Contactanos</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#nosotros">Nosotros</a></li>
+            <li><a href="../index.html#servicios">Servicios</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Legales -->
+        <div class="footer-column footer-legal">
+          <h4>Legales</h4>
+          <ul>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Dirección -->
+        <div class="footer-column footer-contact">
+          <h4>Dirección</h4>
+          <p>San Luis</p>
+          <p>Córdoba, Argentina</p>
+          <p>Teléfono:</p>
+          <p>+54 9 351 391-0797</p>
+        </div>
+
+        <!-- Columna 5: Redes sociales -->
+        <div class="footer-column footer-social">
+          <h4>Síguenos</h4>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com/profile.php?id=61560194522415"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/subli_artd/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/yuliriverosortiz-front-qa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://wa.me/5493513910797"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior -->
+      <div class="footer-bottom">
+        <p>Built with ❤️ by Yuli</p>
+        <p>&copy; 2025 SubliArt. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>

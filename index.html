@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SubliArt - Productos Personalizados</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img src="./assets/subliarthorizontal.png" alt="Logo SubliArt" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="./contacto/contact.html">Contacto</a></li>
+        <li>
+          <a href="./contacto/carrito.html" class="carrito-icono">
+            🛒 <span id="contador-carrito">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- Header -->
+    <header>
+      <div class="text-content">
+        <h1>¡Bienvenidos a SubliArt!</h1>
+        <p>
+          Transformamos tus ideas en productos únicos y personalizados. ¿Quieres
+          regalar algo especial o promocionar tu marca? ¡Nosotros lo hacemos
+          realidad!
+        </p>
+        <a href="https://wa.me/5493513910797" class="btn-primary"
+          >Empieza Aquí</a
+        >
+      </div>
+      <img
+        src="./assets/taza-sub.png"
+        alt="Tazas personalizadas"
+        class="hero-image"
+      />
+    </header>
+
+    <!-- Products Section -->
+    <section class="products-section" id="productos">
+      <div class="container-products">
+        <h2>Nuestra Creatividad</h2>
+        <p>
+          Cada producto es una obra de arte única, diseñada especialmente para
+          ti. Descubre nuestra colección de tazas personalizadas que combinan
+          calidad y creatividad.
+        </p>
+
+        <div id="contenedor-tarjetas" class="products-grid"></div>
+
+        <div class="cta-center">
+          <a href="#servicios" class="btn-primary">Ver Servicios</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="nosotros">
+      <div class="about-content">
+        <div class="about-text">
+          <h2>Nosotros SubliArt</h2>
+          <p>
+            Somos una empresa especializada en sublimación y personalización de
+            productos. Con años de experiencia en el mercado, nos dedicamos a
+            crear artículos únicos que superen las expectativas de nuestros
+            clientes.
+          </p>
+          <ul class="features-list">
+            <li>Calidad garantizada en todos nuestros productos</li>
+            <li>Diseños personalizados según tus necesidades</li>
+            <li>Entrega rápida y segura</li>
+            <li>Atención al cliente excepcional</li>
+            <li>Precios competitivos del mercado</li>
+          </ul>
+        </div>
+        <div class="about-image">
+          <img src="./assets/cuptaza.png" alt="Jarro térmico" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="servicios">
+      <div class="services-content">
+        <div class="services-image">
+          <img src="./assets/daftpunktshit.png" alt="Remera Daft Punk" />
+        </div>
+
+        <div class="services-text">
+          <h2>Diseñamos & Creamos</h2>
+          <p>
+            Nuestros buzos personalizados combinan comodidad y estilo.
+            Utilizamos técnicas de sublimación de alta calidad para garantizar
+            diseños duraderos y vibrantes que no se desvanecen con el tiempo.
+          </p>
+          <ul class="features-list">
+            <li>Telas de primera calidad</li>
+            <li>Diseños que no se agrietan ni decoloran</li>
+            <li>Variedad de tallas y colores</li>
+            <li>Proceso de sublimación profesional</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-container">
+        <!-- Columna 1: Logo y nombre -->
+        <div class="footer-column footer-logo">
+          <img src="./assets/sublimascota.png" alt="Mascota SubliArt" />
+          <h3>SubliArt</h3>
+        </div>
+
+        <!-- Columna 2: Enlaces principales -->
+        <div class="footer-column footer-links">
+          <h4>Contactanos</h4>
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#nosotros">Nosotros</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Legales -->
+        <div class="footer-column footer-legal">
+          <h4>Legales</h4>
+          <ul>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Dirección -->
+        <div class="footer-column footer-contact">
+          <h4>Dirección</h4>
+          <p>San Luis</p>
+          <p>Córdoba, Argentina</p>
+          <p>Teléfono:</p>
+          <p>+54 9 351 391-0797</p>
+        </div>
+
+        <!-- Columna 5: Redes sociales -->
+        <div class="footer-column footer-social">
+          <h4>Síguenos</h4>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com/profile.php?id=61560194522415"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/subli_artd/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/yuliriverosortiz-front-qa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://wa.me/5493513910797"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior -->
+      <div class="footer-bottom">
+        <p>Built with ❤️ by Yuli</p>
+        <p>&copy; 2025 SubliArt. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+    <script type="module" src="./js/index.js"></script>
+  </body>
+</html>

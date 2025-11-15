@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrito - SubliArt</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img src="../assets/subliarthorizontal.png" alt="logo SubliArt" />
+      </div>
+      <ul class="nav-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#nosotros">Nosotros</a></li>
+        <li><a href="../index.html#servicios">Servicios</a></li>
+        <li><a href="./contact.html">Contacto</a></li>
+        <li>
+          <a href="./carrito.html" class="carrito-icono">
+            🛒 <span id="contador-carrito">0</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <section>
+      <h1>Carrito de Compras</h1>
+
+      <section id="contenedor-carrito">
+        <!-- Productos del carrito -->
+      </section>
+      <div class="acciones-carrito" id="acciones-carrito">
+        <!-- Botones de eliminar y finalizar compra se agregan desde JS -->
+      </div>
+
+      <section id="resumen-carrito">
+        <h2>Resumen de Compra</h2>
+        <div class="resumen-contenido">
+          <div class="resumen-item">
+            <span>Subtotal:</span>
+            <span id="subtotal">$0</span>
+          </div>
+          <div class="resumen-item">
+            <span>Envío:</span>
+            <span id="envio">A calcular</span>
+          </div>
+          <div class="resumen-item resumen-total">
+            <span>Total:</span>
+            <span id="total">$0</span>
+          </div>
+        </div>
+        <button class="btn-primary btn-finalizar" id="btn-finalizar">
+          Finalizar Compra
+        </button>
+      </section>
+    </section>
+
+    <footer>
+      <div class="footer-container">
+        <!-- Columna 1: Logo y nombre -->
+        <div class="footer-column footer-logo">
+          <img src="../assets/sublimascota.png" alt="Mascota Subliart" />
+          <h3>SubliArt</h3>
+        </div>
+
+        <!-- Columna 2: Enlaces principales -->
+        <div class="footer-column footer-links">
+          <h4>Contactanos</h4>
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../index.html#nosotros">Nosotros</a></li>
+            <li><a href="../index.html#servicios">Servicios</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 3: Legales -->
+        <div class="footer-column footer-legal">
+          <h4>Legales</h4>
+          <ul>
+            <li><a href="#">Términos y Condiciones</a></li>
+            <li><a href="#">Política de Privacidad</a></li>
+          </ul>
+        </div>
+
+        <!-- Columna 4: Dirección -->
+        <div class="footer-column footer-contact">
+          <h4>Dirección</h4>
+          <p>San Luis</p>
+          <p>Córdoba, Argentina</p>
+          <p>Teléfono:</p>
+          <p>+54 9 351 391-0797</p>
+        </div>
+
+        <!-- Columna 5: Redes sociales -->
+        <div class="footer-column footer-social">
+          <h4>Síguenos</h4>
+          <div class="social-icons">
+            <a
+              href="https://www.facebook.com/profile.php?id=61560194522415"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/subli_artd/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/yuliriverosortiz-front-qa/"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+            <a
+              href="https://wa.me/5493513910797"
+              target="_blank"
+              rel="noopener noreferrer"
+              ><i class="fab fa-whatsapp"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Barra inferior -->
+      <div class="footer-bottom">
+        <p>Built with ❤️ by Yuli</p>
+        <p>&copy; 2025 SubliArt. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+
+    <script type="module" src="../js/carrito.js"></script>
+  </body>
+</html>
