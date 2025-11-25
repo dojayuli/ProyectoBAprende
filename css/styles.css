@@ -67,80 +67,6 @@ body {
   transition: all 0.3s ease;
 }
 
-/* RESPONSIVE */
-@media (max-width: 768px) {
-  .navbar {
-    padding: 1rem 2rem;
-    flex-wrap: wrap;
-  }
-
-  .nav-logo {
-    order: 1;
-    flex: 1;
-  }
-
-  .menu-icon {
-    display: flex;
-    order: 2;
-    z-index: 1001;
-  }
-
-  .nav-links {
-    order: 3;
-    width: 100%;
-    flex-direction: column;
-    background: #e0f2f8;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.3s ease;
-    gap: 0;
-  }
-
-  .nav-links li {
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
-    border-bottom: 1px solid rgba(16, 113, 139, 0.1);
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
-
-  .nav-links li a {
-    display: block;
-    padding: 0.5rem;
-    font-size: 1.2rem;
-  }
-
-  .nav-logo img {
-    width: 100px;
-  }
-
-  /* Cuando el checkbox está checked */
-  #menu-toggle:checked ~ .nav-links {
-    max-height: 500px;
-    padding: 1rem 0;
-  }
-
-  #menu-toggle:checked ~ .nav-links li {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Animar las líneas del hamburguesa */
-  #menu-toggle:checked ~ .menu-icon span:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 8px);
-  }
-
-  #menu-toggle:checked ~ .menu-icon span:nth-child(2) {
-    opacity: 0;
-  }
-
-  #menu-toggle:checked ~ .menu-icon span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
-  }
-}
-
 /* Header */
 header {
   background: #10718b;
@@ -150,11 +76,12 @@ header {
   align-items: center;
   justify-content: space-around;
   flex-wrap: wrap;
-  height: 100vh;
+  /* CAMBIO: Usar min-height en desktop para asegurar el espacio sin forzar 100vh fijo */
+  min-height: calc(100vh - 80px);
 }
 
 header .text-content {
-  max-width: 600px; /* controla el ancho del texto */
+  max-width: 600px;
 }
 
 header h1 {
@@ -203,7 +130,6 @@ header p {
 .hero-image {
   width: 100%;
   max-width: 400px;
-
   border-radius: 15px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
@@ -327,7 +253,7 @@ section p {
 
 .about-content {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr; /* un poco más de espacio para el texto */
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 3rem;
   align-items: center;
   justify-content: center;
@@ -547,8 +473,99 @@ footer {
   margin: 0;
 }
 
-/* Responsive */
+/* RESPONSIVE - AJUSTES PARA TABLET Y MÓVIL (<= 768px) */
 @media (max-width: 768px) {
+  /* NAVBAR - AJUSTES ORIGINALES */
+  .navbar {
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-logo {
+    order: 1;
+    flex: 1;
+  }
+
+  .menu-icon {
+    display: flex;
+    order: 2;
+    z-index: 1001;
+  }
+
+  .nav-links {
+    order: 3;
+    width: 100%;
+    flex-direction: column;
+    background: #e0f2f8;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    gap: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(16, 113, 139, 0.1);
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  .nav-links li a {
+    display: block;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+  }
+
+  .nav-logo img {
+    width: 100px;
+  }
+
+  /* Cuando el checkbox está checked */
+  #menu-toggle:checked ~ .nav-links {
+    max-height: 500px;
+    padding: 1rem 0;
+  }
+
+  #menu-toggle:checked ~ .nav-links li {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Animar las líneas del hamburguesa */
+  #menu-toggle:checked ~ .menu-icon span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  #menu-toggle:checked ~ .menu-icon span:nth-child(2) {
+    opacity: 0;
+  }
+
+  #menu-toggle:checked ~ .menu-icon span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+  }
+
+  /* HEADER - CORRECCIÓN CLAVE PARA APILAR Y CENTRAR */
+  header {
+    flex-direction: column; /* Apilar imagen y texto */
+    text-align: center;
+    padding: 3rem 1.5rem;
+    min-height: auto; /* Permite que el contenido dicte la altura */
+  }
+
+  header .text-content {
+    order: 2; /* Texto debajo de la imagen */
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-image {
+    order: 1; /* Imagen arriba del texto */
+    max-width: 70%; /* Tamaño más manejable para móvil */
+    margin-bottom: 2rem; /* Espacio debajo de la imagen */
+  }
+
   header h1 {
     font-size: 2rem;
   }
@@ -557,29 +574,64 @@ footer {
     font-size: 1rem;
   }
 
+  /* SECCIONES (PRODUCTOS/NOSOTROS/SERVICIOS) - CORRECCIÓN DE COLUMNAS Y ALINEACIÓN */
   section h2 {
     font-size: 2rem;
   }
 
   .about-content,
   .services-content {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Apilar en una sola columna */
+    gap: 2rem;
   }
 
   .products-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr; /* Apilar tarjetas en una sola columna */
     gap: 1.5rem;
   }
 
-  .about-text h2 {
+  /* Asegurar el centrado de texto en las secciones apiladas */
+  .about-text h2,
+  .services-section h2 {
     text-align: center;
   }
 
-  .about-text p {
+  .about-text p,
+  .services-text p {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .features-list {
+    text-align: left; /* Mantiene el texto de la lista alineado */
+    max-width: fit-content;
+    margin: 0 auto;
+  }
+
+  /* FOOTER - CORRECCIÓN PARA APILAR COLUMNAS */
+  .footer-container {
+    grid-template-columns: 1fr; /* Apilar todas las columnas */
+    text-align: center;
+    gap: 30px;
+    padding-bottom: 30px;
+  }
+
+  .footer-logo {
+    align-items: center; /* Centrar el logo y el texto */
+  }
+
+  .social-icons {
+    justify-content: center; /* Centrar los iconos sociales */
+  }
+
+  .footer-bottom {
+    flex-direction: column; /* Apilar los textos de copyright */
+    gap: 10px;
   }
 }
 
+/* Estilos de Formulario de Contacto (Mantengo sin modificar) */
 .fs-form {
   max-width: 700px;
   margin: 0 auto;
@@ -685,8 +737,7 @@ select.fs-input {
   font-style: italic;
 }
 
-/* Nvo estilo de cards carrito */
-
+/* Estilos de Carrito (Mantengo sin modificar) */
 #contenedor-carrito {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
